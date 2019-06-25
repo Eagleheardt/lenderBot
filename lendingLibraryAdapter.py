@@ -487,7 +487,6 @@ def getAvalableByCategory(mediaCategory):
     return fin
 
 def getAvalableByType(mediaType):
-    pass
     cmd = """
     SELECT 
     m.ID

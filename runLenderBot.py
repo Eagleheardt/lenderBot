@@ -1,14 +1,11 @@
 import decode as de
 import lendingLibraryAdapter as adapter
 
-import sqlite3
-from sqlite3 import Error
 import time
 import datetime
 import random
 import os
 
-from datetime import datetime
 from slackclient import SlackClient
 
 #####################
