@@ -338,7 +338,8 @@ def format_Media():
     MediaCategory as mc 
         ON m.MediaCategory = mc.ID
     , MediaType as mt 
-	    ON m.MediaType = mt.ID;
+	    ON m.MediaType = mt.ID
+    ORDER BY m.FullName ASC;
     """
 
     return sql.GET(cmd)
@@ -378,7 +379,8 @@ def format_Media_Available():
             WHERE 
                 t.MediaID = m.ID
                 AND t.CheckIN is null
-            ) = 0;
+            ) = 0
+    ORDER BY m.FullName asc;
     """
 
     return sql.GET(cmd)
@@ -418,7 +420,8 @@ def format_Media_CheckedOut():
         WHERE 
             t.MediaID = m.ID
             AND t.CheckIN is null
-        ) > 0;
+        ) > 0
+    ORDER BY m.FullName asc;
     """
 
     return sql.GET(cmd)
